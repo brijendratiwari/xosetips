@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-nav-bar class="bar-light">
+        <ion-nav-buttons side="left">
+            <a style="background-color: #fff; color: #000; margin: 0; font-size: 16px;" ng-click="backFromLogin()" class="button button-dark button-block"><i class="icon ion-ios-arrow-back myback"></i>Home</a>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <div style="width: 60px;"></div>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content padding="true" style="background: url(img/LLQoKTueSe6TUfgTdOAn_flaming-football.jpg) no-repeat center;background-size:cover;" class="has-header">        
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <form name="loginform" class="list" novalidate>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'EMAIL' | translate }}</span>
+                    <input type="email" name="usermail" ng-model="signin.useremail" placeholder="" ng-required="true">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'PASSWORD' | translate }}</span>
+                    <input type="password" name="password" ng-model="signin.password" placeholder="" ng-minlength="8" ng-required="true">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 46px;"></div>
+            <button ng-click="loginClick()" ng-disabled="loginform.$invalid" class="button button-dark button-block">{{ 'SIGNIN' | translate }}</button>
+            <div class="spacer" style="height: 30px;"></div>
+            <button ng-click="facebookLogin()" class="button facebook button-block">{{ 'FACEBOOK_LOGIN' | translate }}</button>
+            <div class="spacer" style="height: 30px;"></div>
+            <button ng-click="signup()" class="button button-calm button-block">{{ 'INDEX_CREATE_USER_LINK' | translate }}</button>
+        </form>
+    </ion-content>
+</ion-view>

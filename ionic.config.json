@@ -1,0 +1,10 @@
+{
+  "name": "XoseTips",
+  "app_id": "8cb5f0a4",
+  "proxies": [
+    {
+      "path": "/apicall/",
+      "proxyUrl": "http://ben.engd.com/"
+    }
+  ]
+}

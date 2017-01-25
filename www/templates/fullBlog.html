@@ -1,0 +1,28 @@
+<ion-view style="background-color:#000000;">
+<ion-nav-bar class="bar-light">
+        <ion-nav-buttons side="left">
+            <button style="background-color: #fff; color: #000; margin: 0; font-size: 16px; padding-right: 0;" ng-click="backToMenu()" class="button button-dark button-block"><i class="icon ion-ios-arrow-back myback"></i>{{ 'BACK' | translate }}</button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <div style="width: 60px;"></div>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <ion-item>{{blog.BlogTitle}}</ion-item>
+            <div class=" item item-image">
+                <img src="{{blog.thumb}}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body">
+                <h2 style="color:#000000;">{{blog.BlogTitle}}</h2>
+                <ion-text style="color:#000000; text-align: left; padding: 0">
+                    <p style="text-align: center;">{{blog.editedat.split(" ")[0]}} | {{blog.author}} | {{blog.metaTags}}</p>
+                    <p>{{blog.metaDesc}}</p>
+                </ion-text>
+            </div>
+            <ion-item class="dark">
+                <span ng-bind-html="blog.blogMainContent" style="text-transform: uppercase;display: inline;float: left;"></span>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

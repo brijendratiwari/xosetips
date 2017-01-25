@@ -1,0 +1,35 @@
+<ion-view style="background-color:#000000;">
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <ion-item class="item-avatar">
+                <img src="{{profile.userinfo.profile_image}}" style="margin-left: auto; margin-right: auto; float: left; position: absolute; border-radius: 50px;" width="100px" height="auto">
+                <h2>{{profile.userinfo.first_name}} {{profile.userinfo.last_name}}</h2>
+                <p style="white-space:normal;">Email: {{profile.userinfo.email}} | Phone: {{profile.userinfo.phone}}</p>
+            </ion-item>
+        </ion-list>
+        <button ng-click="openProfile()" class="button button-calm  button-block">{{ 'EDIT_PROFILE' | translate }}</button>
+        <div class="item item-body">
+            <h2 style="color:#000000;text-align:center;"> {{ 'SUBSCRIPTION_DETAILS' | translate }} </h2>
+            <div style="margin-top:0px;color:#000000;text-align:center;">
+                <p>{{ 'SUBSCRIPTION_IS' | translate }}
+                    <strong ng-class="(profile.userinfo.isActive)?'active':'inactive'">{{(profile.userinfo.isActive)?"active":"inactive"}}</strong><br/>
+                    {{ 'SUB_ACTIVE_TIL' | translate }}
+                    <strong class="inactive">{{(profile.userinfo.subexpiry != "0000-00-00")?profile.userinfo.subexpiry:"Unavailable"}}</strong><br/>
+                    {{ 'EXTEND_SUB_CLICK' | translate }}</p>
+            </div>
+            <a ui-sref="menu.subscription" class="button button-calm  button-block">{{ 'EXT_SUBS' | translate }}</a>
+            <h2 style="color:#000000;text-align:center;">{{ 'PAYMENTS' | translate }}</h2>
+            <ion-list class="list-subscr subscription" ng-show="subscriptions.length > 0">
+                <ion-item class="item-icon-left" ng-repeat="subscription in subscriptions" ng-click="showDetail(subscription.order_id)">
+                    <i class="icon ion-images"></i>
+                    <div>{{subscription.descr}}<br/>{{subscription.payment_type}}
+                    </div>
+                    <span class="item-note" ng-class="(subscription.payment_status != 'SUCCESS')?'pending':''" ng-bind-html="(subscription.payment_status == 'SUCCESS')? ('IS_PAID' | translate) :subscription.payment_status"></span>
+                </ion-item>
+            </ion-list>
+            <ion-text style="text-align: center; width: 100%; display:block;" ng-show="subscriptions.length == 0"">
+                No Subscriptions to show
+            </ion-text>
+        </div>
+    </ion-content>
+</ion-view>

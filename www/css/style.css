@@ -1,0 +1,329 @@
+
+.platform-ios .manual-ios-statusbar-padding{
+	padding-top:20px;
+}
+
+.manual-remove-top-padding{
+	padding-top:0px; 
+}
+
+.manual-remove-top-padding .scroll{
+	padding-top:0px !important;
+}
+
+ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+	margin-left:-10px;
+	margin-right:-10px;
+}
+
+ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+	border-radius:0px;
+	border-left:0px;
+	border-right: 0px;
+}
+
+.profileloader {
+    background-color: rgba(1, 1, 1, 0.95);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+
+.profileloader ion-spinner {
+    display: block;
+    margin: 45% auto auto;
+    width: 40px;
+}
+
+.profileloader ion-spinner svg {
+    fill: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    stroke: #fff;
+    width: 40px;    
+}
+
+.item.item-input, .item.item-select {
+	padding: 10px;
+}
+
+.item.item-input span, .item.item-select span {
+	font-size: 15px !important;
+	padding-right: 0;
+}
+
+.item.item-select select {
+	padding-left: 10px; 
+}
+
+.disable-user-behavior ion-item:last-child > button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: inherit;
+    font: inherit;
+    height: 100%;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.tips-page ion-item {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 120px;
+}
+
+.tips-page ion-item > img {
+	max-width: 100px !important;
+    max-height: 100px !important;
+    margin-right: 10px;
+    display: block;
+    float: left;
+}
+
+ion-modal-view.detailview {
+    background-color: rgba(0,0,0,0.2); 
+}
+
+.modal-wrapper > ion-modal-view.detailview .padder {
+    padding: 30px;
+    height: 311px;
+    margin-top: 32%;
+}
+
+.modal-wrapper > ion-modal-view.detailview .padder > div {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+ .modal-wrapper > ion-modal-view.detailview .padder > div > strong {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+ }
+
+.modal-wrapper > ion-modal-view.detailview .padder > div > div {
+    padding: 25px 50px 5px;
+    height: calc(100% - 50px);
+}
+
+.modal-wrapper > ion-modal-view.detailview .padder button {
+    width: 80px;
+    margin: 25px auto auto;
+    background-color: #e34823;
+    color: #fff;
+    position: relative;
+}
+
+.tips-page ion-item > h2.dark {
+	display: block;
+    float: left;
+}
+
+.list-subscr.subscription ion-item {
+	padding: 0;
+	font-size: 14px;
+}
+
+.list-subscr.subscription ion-item i.icon {
+	padding: 5px;
+	position: relative;
+    left: 2px;
+	top: 10px;
+}
+
+div.center-text {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    height: 140px;
+    margin: 44% auto;
+    padding: 40px;
+    text-align: center;
+    width: 68%;
+}
+
+ion-view .list.card ion-text {
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	height: auto;
+	font-size: 3vw !important;
+	word-break: break-all;
+	display: block;
+	white-space: normal;
+}
+
+ion-view .list.card .item.item-body > div {
+	height: 60px;
+    overflow: hidden;
+    text-align: center;
+    white-space: normal;
+}
+
+strong.active {
+	color: #0DB981;
+}
+
+form[name="profileForm"] label {
+    padding-top: 5px !important;
+    padding-bottom: 15px !important;
+}
+
+form[name="profileForm"] label input{
+    height: 50px;
+}
+
+label div.error-msg {
+    bottom: 0;
+    color: red;
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+label div.error-msg > p {
+    color: red;
+    float: right;
+    font-size: 9px !important;
+    margin: 0 !important;
+}
+
+strong.inactive {
+	color: #e2262f;
+}
+
+ion-popover-view.small {
+    height: 150px !important;
+}
+
+ion-popover-view .button-bar {
+    margin: 20px auto;
+    width: 80%;
+}
+
+ion-popover-view .button-bar button {
+    border: 1px solid rgba(13,13,13,0.2) !important;
+}
+
+ion-popover-view .button-bar button:first-child {
+    border-right: none;
+}
+
+ion-popover-view .button-bar button:last-child {
+    border-left: none;
+}
+
+ion-popover-view .button-bar button.button.button-block {
+    font-size: 10px !important;
+}
+
+ion-popover-view ion-content.padder div {
+    padding: 40px 20px 0;
+}
+
+ion-popover-view ion-content.padder span.payment::before {
+    content: "€";
+}
+
+div.buttons-right button {
+    background-size: auto 80% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 20px;
+    width: 40px;
+}
+
+div.buttons-right button.en {
+    background-image: url(../img/english.png) !important;
+}
+
+div.buttons-right button.el {
+    background-image: url(../img/greek.png) !important;
+}
+
+.title.title-center.header-item, .title.title-left.header-item {
+    background: url(../img/icon.png);
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ion-ios-arrow-back.myback {
+    display: block;
+    float: left;
+    margin-top: 2px 5px auto auto !important;
+    transform: scale(1.5);
+}
+
+span.item-note {
+	background: #169d2a none repeat scroll 0 0;
+    border-radius: 3px;
+    bottom: 4px;
+    color: #fff;
+    float: right;
+    padding: 5px 10px;
+    position: absolute;
+    right: 2px;
+    text-align: center;
+}
+
+span.item-note.pending {
+	background: #BD4B11;
+}
+
+ion-footer-bar button.paginator {
+    border-radius: 18px;
+    height: 36px;
+    margin: 0 5px;
+    width: 38px;
+    background: #fff;
+    border-color: #645;
+}
+
+ion-list.list-subscr ion-item i, ion-list.list-subscr ion-item div {
+	display: block !important;
+    float: left;
+    height: 100% !important;
+    position: relative !important;
+}
+
+ion-list.list-subscr ion-item i {
+	width: 45px;
+}
+
+ion-list.list-subscr ion-item div {
+	width: 150px;
+	padding: 10px;
+}
+
+ion-footer-bar .paginator.active {
+	background: #458648 none repeat scroll 0 0;
+    border-color: #000;
+    color: #fff;
+}
+
+ion-text > p {
+	text-align: left; 
+}
+
+button.facebook {
+	background-color: #3B5998;
+	color: #fff;
+}
+
+#register-form {max-width:50% !important;} 
+#grcaptcha{margin-bottom:15px;}
+#register-form input[type="text"], #register-form input[type="password"] {margin-bottom: 0px !important;}
+footer{margin-top:0px;}
+.error, .errormessage {color:#ff0000;}
+@media screen and (max-width: 575px){
+    #grcaptcha {transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;}
+    #register-form{max-width:90% !important;} 
+}

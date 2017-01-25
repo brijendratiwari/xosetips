@@ -1,0 +1,25 @@
+<ion-view style="background-color:#000000;">
+    <ion-content padding="true" class="has-header tips-page">
+        <form name="seachform">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-keyup="searchTip($event)" placeholder="{{ 'SEARCH' | translate }}">
+            </label>
+        </form>
+        <div class="center-text" ng-show="showtip">
+            {{ 'NO_RESULTS_FOUND' | translate }}
+        </div>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="tip in tips" class="item-thumbnail-left item-icon-right dark" ng-click="menufullTip(tip.id)">
+                <img src="{{tip.thumb}}">
+                <div class="dark" style="font-size: 16px; text-transform: capitalize">{{tip.title}}
+                    <p style="white-space:normal; height: 80px; width: 100%;font-size: 3.2vw;">{{tip.compet1}} vs {{tip.compet2}} {{tip.catname}} | {{tip.author}} | {{tip.match_date}} | {{tip.odds}} {{ 'ODDS' | translate }}</p>
+                    <i class="icon ion-chevron-right"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="shouldCheckNext()" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

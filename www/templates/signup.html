@@ -1,0 +1,35 @@
+<ion-view>
+    <ion-content padding="true" class="has-header" style="background: url(img/LLQoKTueSe6TUfgTdOAn_flaming-football.jpg) no-repeat center;background-size:cover;">
+        <form name="formsignup" class="list" novalidate>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'INDEX_FNAME_TH' | translate }}*</span>
+                    <input type="text" name="firstname" ng-required="true" ng-model="signupform.firstname" ng-minlength="2" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'INDEX_LNAME_TH' | translate }}*</span>
+                    <input type="text" name="lastname" ng-required="true" ng-model="signupform.lastname" ng-minlength="2" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'EMAIL' | translate }}*</span>
+                    <input type="email" name="email" ng-required="true" ng-model="signupform.email" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'PHONE' | translate }}</span>
+                    <input type="tel" name="phone" ng-model="signupform.phone" ng-required="false" ng-minlength="8" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'PASSWORD' | translate }}*</span>
+                    <input type="password" name="password" ng-model="signupform.password" ng-required="true" ng-minlength="8" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{ 'REPEAT_PASS' | translate }}*</span>
+                    <input type="password" name="repeatpass" ng-model="signupform.repeatpass" ng-minlength="8" ng-required="true" placeholder="">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 46px;"></div>
+            <div vc-recaptcha ng-model="signupform.myRecaptchaResponse" key="'6LeBtikTAAAAAOx9r0iHJWjhHwdfJE2d1LPsz_3Y'"></div>
+            <button ng-click="signup_button()" ng-disabled="formsignup.$invalid && formsignup.$error" class="button button-stable  button-block">Sign up</button>
+        </form>
+    </ion-content>
+</ion-view>

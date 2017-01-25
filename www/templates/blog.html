@@ -1,0 +1,38 @@
+<ion-view style="background-color:#000000;">
+    <ion-content padding="true" class="has-header">
+        <form class="list" name="blogseachform">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-keyup="searchBlog($event)" placeholder="{{ 'SEARCH' | translate }}">
+            </label>
+        </form>
+        <div class="center-text" ng-show="showblog">
+            {{ 'NO_RESULTS_FOUND' | translate }}
+        </div>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <div ng-repeat="(key, blog) in blogs">
+                <div class="spacer" style="width: 300px; height: 0px;"></div>
+                <div class="list card">
+                    <ion-text>
+                        {{blog.BlogTitle}}
+                    </ion-text>
+                    <div class="item item-image">
+                        <img src="{{blog.thumb}}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                    <ion-item class="dark">
+                        <span ng-bind-html="blog.blogMainContent" style="text-transform: uppercase;"></span>
+                    </ion-item>
+                    <div class="item item-body">
+                        <div style="margin-top:0px;color:#000000;">
+                            {{blog.metaDesc}}
+                        </div>
+                        <button ng-click="openfullblog(key + 1)" class="button button-calm button-block">{{ 'READ_MORE' | translate }}</button>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="shouldCheckNext()" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

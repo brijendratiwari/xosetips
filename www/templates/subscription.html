@@ -1,0 +1,26 @@
+<ion-view style="background-color:#000000;">
+    <ion-content padding="true" class="has-header">
+        <div class="item item-body">
+            <h1 style="color:#000000;">{{ 'SELECT_PACKAGE' | translate }}</h1>
+        </div>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <label class="item item-select" id="subscription-select1">
+            <span class="input-label">{{ 'SELECT_PACKAGE' | translate }}</span>
+            <select ng-model="formpay.plan_id">
+                <option ng-repeat="opt in paymentopts" value="{{opt.id}}">{{opt.name}} - €{{opt.price}}</option>
+                <!-- <option value="2">{{ 'ONE_MONTH' | translate }} - €25</option>
+                <option value="1">{{ '4_MONTH' | translate }} - €100</option> -->
+            </select>
+        </label>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <label class="item item-select">
+            <span class="input-label">{{ 'PAYMENT_METHOD' | translate }}</span>
+            <select ng-model="formpay.payment_method">
+                <option value="paypal">PayPal</option>
+                <option value="paysafe">paysafecard</option>
+            </select>
+        </label>
+        <div style="color:#fff; font-size: 16px; font-weight: bold;">{{ 'GREEK_PAYSAFE_CONTROLS' | translate }}</div>
+        <button ng-click="pay()" class="button button-calm  button-block">{{ 'PAY_NOW' | translate }}</button>
+    </ion-content>
+</ion-view>
